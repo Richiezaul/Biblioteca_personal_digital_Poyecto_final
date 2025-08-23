@@ -1,0 +1,7 @@
+{
+  "name": "Biblioteca_personal_digita_proyecto_final",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
