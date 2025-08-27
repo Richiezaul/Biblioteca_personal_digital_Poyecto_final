@@ -1,0 +1,105 @@
+/* Fondo vibrante (claro) */
+.custom-bg {
+    --background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    min-height: 100%;
+    padding-top: max(24px, env(safe-area-inset-top));
+  }
+  
+  /* Tarjeta translúcida para inputs */
+  .card {
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+    padding: 6px 0;
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.18);
+    margin-top: 8px;
+  }
+  
+  /* Imagen */
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 18px;
+  }
+  .logo {
+    width: 128px;
+    height: 128px;
+    object-fit: contain;
+    border-radius: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    background: rgba(255,255,255,0.2);
+    padding: 10px;
+  }
+  
+  /* Mensajes de error */
+  .msg { margin: 4px 16px 0; font-size: 0.9rem; }
+  
+  /* Botón CTA vivo */
+  .cta {
+    --background: #ff6a00;            /* naranja vivo */
+    --background-hover: #ff4d00;
+    --background-activated: #ff4d00;
+    --color: #ffffff;
+    --border-radius: 14px;
+    font-weight: 800;
+    letter-spacing: .3px;
+    box-shadow: 0 8px 18px rgba(255, 106, 0, 0.45);
+  }
+  
+  /* Botón ghost claro sobre el degradado */
+  .ghost {
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: underline;
+  }
+  
+  /* Ajustes de ion-item para el look translúcido */
+  ion-item {
+    --background: transparent;
+    --border-color: rgba(255, 255, 255, 0.35);
+    --color: #fff;
+  
+    ion-input {
+      --color: #fff;
+      --placeholder-color: rgba(255, 255, 255, 0.8);
+    }
+  }
+  
+  /* Toolbar primaria más viva */
+  ion-toolbar[color="primary"] {
+    --background: linear-gradient(90deg, #5b86e5 0%, #36d1dc 100%);
+    --color: #ffffff;
+  }
+  
+  /* --------- Modo oscuro (usa .dark en body o media query) --------- */
+  
+  /* Si tu app usa la clase .dark en <body> (Ionic Dark Mode) */
+  :host-context(.dark) .custom-bg {
+    --background: linear-gradient(135deg, #0f2027 0%, #203a43 50%, #2c5364 100%);
+  }
+  :host-context(.dark) .card {
+    background: rgba(17, 25, 40, 0.55);
+    box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+  }
+  :host-context(.dark) .logo {
+    background: rgba(255,255,255,0.08);
+  }
+  :host-context(.dark) .cta {
+    --background: #00c6ff;            /* azul cian brillante */
+    --background-hover: #00a3d6;
+    --background-activated: #0097c7;
+    box-shadow: 0 8px 18px rgba(0, 198, 255, 0.45);
+  }
+  :host-context(.dark) .ghost { color: #e6f7ff; }
+  :host-context(.dark) ion-item {
+    --border-color: rgba(230, 247, 255, 0.28);
+  }
+  
+  /* Si prefieres detectar el modo oscuro por media query:
+  @media (prefers-color-scheme: dark) { ...mismos estilos de arriba... }
+  */
+  

@@ -1,7 +1,7 @@
 {
-  "name": "Biblioteca_personal_digita_proyecto_final",
+  "name": "Biblioteca_Personal",
   "integrations": {
     "capacitor": {}
   },
-  "type": "angular"
+  "type": "angular-standalone"
 }
