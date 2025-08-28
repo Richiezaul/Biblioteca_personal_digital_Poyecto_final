@@ -25,15 +25,18 @@
     justify-content: center;
     margin: 10px 0 18px;
   }
+
   .logo {
-    width: 128px;
-    height: 128px;
+    display: block;
+    width: min(92vw, 560px); /* crece hasta 92% del viewport, tope 560px */
+    height: auto;            /* mantiene proporción */
     object-fit: contain;
     border-radius: 20px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.35);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.35);
     background: rgba(255,255,255,0.2);
     padding: 10px;
   }
+
   
   /* Mensajes de error */
   .msg { margin: 4px 16px 0; font-size: 0.9rem; }
